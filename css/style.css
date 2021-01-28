@@ -42,6 +42,10 @@ h3 {
 strong {
   color: var(--accent);
 }
+em {
+  color: var(--accent);
+  font-style: normal;
+}
 .container {
   width: 90%;
   margin: 0 auto;
@@ -119,7 +123,7 @@ nav {
 }
 .nav-lists {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .nav-list {
   display: flex;
@@ -223,7 +227,7 @@ nav {
 
 .button.primary {
   color: var(--light);
-  background-color: var(--accent);
+  background-color: var(--light);
 }
 .button.primary::after {
   transform: scale(1, 1);
@@ -275,11 +279,26 @@ nav {
 }
 .skill-list {
   line-height: 3;
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
 }
 .skill {
   background-color: var(--accent);
   color: var(--light);
   font-size: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 0.2em 1.5em;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+.tech-icon {
+  color: white;
+  fill: white;
+}
+.tech-icon:before {
+  margin-right: 0.5rem;
 }
 
 .contact-links {
@@ -287,9 +306,8 @@ nav {
   margin-top: 1rem;
 }
 .contact-link {
-  text-decoration: none;
   color: inherit;
-  transition: 300ms all ease-in-out;
+  transition: 200ms all ease-in-out;
 }
 
 .contact-link:hover {
@@ -345,6 +363,22 @@ nav {
   font-family: inherit;
   margin-top: 2rem;
   padding: 0.9em 2.5em;
+  cursor: pointer;
+}
+
+.li-when-large,
+.flex-when-large {
+  display: none;
+}
+
+.somewhere-around-here {
+  color: inherit;
+  font-weight: 400;
+  display: inline-block;
+  transition: all ease-in-out 200ms;
+}
+.somewhere-around-here:hover {
+  color: var(--accent);
 }
 
 /* shift background colors */
@@ -367,7 +401,15 @@ nav {
   }
   .professional-skills {
     margin-left: 3rem;
-    width: max-content;
     max-width: 40ch;
+  }
+  .nav-lists {
+    justify-content: space-between;
+  }
+  .flex-when-large {
+    display: flex;
+  }
+  .li-when-large {
+    display: list-item;
   }
 }

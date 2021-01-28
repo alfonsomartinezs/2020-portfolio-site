@@ -7,7 +7,10 @@
   <link rel="stylesheet" type="text/css" href="assets/font/flaticon.css">
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Work+Sans:wght@200;300;400;500&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
   <title>Alfonso Martinez</title>
 </head>
 <body>
@@ -26,9 +29,9 @@
         <li><a href="#header">Home</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li class="li-when-large"><a href="#contact">Contact</a></li>
       </ul>
-      <ul class="nav-list nav-left-margin">
+      <ul class="nav-list nav-left-margin flex-when-large">
         <li><a href="https://github.com/shrikefound" target="_blank" class="flaticon-github" ></a></li>
         <li><a href="https://www.linkedin.com/in/alfonso-martinez-05b550164/" target="_blank" class="flaticon-linkedin"></a></li>
         <li><a href="" class="flaticon-mail"></a></li>
@@ -116,7 +119,7 @@
           <p class="gallery-description">
             A COVID-19 dashboard that shows a quick overview of how your state is handling the pandemic. 
             Choose your state, switch between cases and deaths, and toggle other graph features.
-            fetches information from the Data API from the COVID Tracking Project and displays it using Plotly JS.
+            fetches information from the <strong>Data API</strong> from the COVID Tracking Project and displays it using <strong>Plotly JS</strong>.
           </p>
           <div class="gallery-buttons">
             <div>
@@ -143,31 +146,29 @@
       <div class="personal-info">
         <h3>Hey There!</h3>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid harum, sed eveniet quo impedit aliquam sequi
-          dolores fugit, repellendus ipsum obcaecati quod enim, laborum eos nobis magni iusto odit natus?
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quia non voluptatum harum ipsa id voluptate repudiandae
+          I'm Alfonso, and I'm a web developer based in Southern California. I'm <strong>passionate</strong> and <strong>people-oriented</strong> -- I enjoy learning novel techniques and technologies, 
+          and I enjoy using them to help people connect and realize their goals. I love back-end development, especially if it involves using <strong>Ruby on Rails</strong> or <strong>PostgreSQL</strong>, 
+          but I'm also comfortable using
+          front-end tech like <strong>React</strong>,<strong>Bootstrap</strong>, and whatever <strong>Javascript libraries</strong> I can get my hands on.
         </p>
 
         <p>
-          modi ex autem, dolorem aspernatur nesciunt hic deleniti? Fugit architecto quod accusamus vitae.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque illo similique voluptatum, perferendis libero est
-          nemo voluptatem voluptate aspernatur dignissimos consectetur, eius, vitae praesentium non incidunt impedit amet quia
-          voluptas.
+          When I'm not making things on the internet, I enjoy playing roleplaying games (like <strong>Dungeons and Dragons</strong> or <strong>Dream Askew</strong>), reading historical non-fiction books (like <strong>Salt: A World History</strong> or <strong>Fifth Sun</strong>), and watching horror movies (Like whatever the newest <strong>Ari Aster</strong> movie is).
         </p>
       </div>
       <div class="professional-skills">
         <h3>Professional Skills</h3>
         <p class="skill-list">
-          <span class="skill">HTML</span>
-          <span class="skill">CSS</span>
-          <span class="skill">Bootstrap</span>
-          <span class="skill">Javascript</span>
-          <span class="skill">React</span>
-          <span class="skill">Node.js</span>
-          <span class="skill">Git</span>
-          <span class="skill">Ruby</span>
-          <span class="skill">Rails</span>
-          <span class="skill">PostgreSQL</span>
+          <span class="skill"><i class="fab fa-html5 tech-icon"></i> HTML</span>
+          <span class="skill"><i class="fab fa-css3-alt tech-icon"></i> CSS</span>
+          <span class="skill"><i class="fab fa-bootstrap tech-icon"></i> Bootstrap</span>
+          <span class="skill"><i class="fab fa-js tech-icon"></i> Javascript</span>
+          <span class="skill"><i class="fab fa-react tech-icon"></i> React</span>
+          <span class="skill"><i class="fab fa-node tech-icon"></i> Node.js</span>
+          <span class="skill"><i class="fab fa-node tech-icon"></i> Git</span>
+          <span class="skill"><i class="fas fa-gem tech-icon"></i> Ruby</span>
+          <span class="skill"><i href="" class="tech-icon flaticon-travelling-rail"></i>Rails</span>
+          <span class="skill"><i class="fas fa-database tech-icon"></i> PostgreSQL</span>
         </p>
       </div>
       </div>
@@ -178,15 +179,7 @@
       <h1>Contact Me</h1>
       
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid harum, sed eveniet quo impedit aliquam sequi
-        dolores fugit, repellendus ipsum obcaecati quod enim, laborum eos nobis magni iusto odit natus?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quia non voluptatum harum ipsa id voluptate repudiandae
-      </p>
-      <p>  
-        modi ex autem, dolorem aspernatur nesciunt hic deleniti? Fugit architecto quod accusamus vitae.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque illo similique voluptatum, perferendis libero est
-        nemo voluptatem voluptate aspernatur dignissimos consectetur, eius, vitae praesentium non incidunt impedit amet quia
-        voluptas.
+        Want to dicuss a project or just want to say hi? <a class="somewhere-around-here" href="mailto: alphaandsew@gmail.com" target="_blank"> Shoot me an email</a> or send me a note using the form below!
       </p>
       
       <form class="contact-form" action="https://app.99inbound.com/api/e/xPVAvAOX" method="POST">
@@ -195,8 +188,7 @@
         <label for="email" class="contact-label">Your Email<span>*</span></label>
         <input class="contact-input" type="email" id="email" name="email" placeholder="enter your email" required>
         <label for="message" class="contact-label">Your Message<span>*</span></label>
-        <textarea class="contact-message" id="message" name="message" placeholder="Write something..." class="contact-message" required>
-        </textarea>
+        <textarea class="contact-message" id="message" name="message" class="contact-message" required></textarea>
         <button class="contact-submit button primary">Submit</button>
       </form>
       <h3 class="contact-links"><a href="#" class="contact-link">Github</a> <a href="#" class="contact-link">LinkedIn</a></h3>
