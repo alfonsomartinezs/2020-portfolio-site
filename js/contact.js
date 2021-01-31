@@ -2,24 +2,23 @@ const contactButton = document.getElementById("contact-submit");
 const cName = document.getElementById('name');
 const cEmail = document.getElementById('email');
 const cMessage = document.getElementById('message');
-console.log(contactButton);
 
-contactButton.addEventListener("click", (event) => {
+contactButton.addEventListener("submit", async (event) => {
   event.preventDefault();
-  contactName = cName.value;
-  contactEmail = cEmail.value;
-  contactMessage = cMessage.value;
-  sendMessage(contactName, contactEmail, contactMessage);
+  console.log(contactButton.innerText)
+  contactButton.innerText = "Message received!"
+  sendMessage();
 });
 
 // Send a POST request with Axios
 
-const sendMessage = async (name,email,message) => {
-  console.log("workin'");
-  console.log(name, email, message);
+const sendMessage = async () => {
+  let name = cName.value;
+  let email = cEmail.value;
+  let message = cMessage.value;
   axios({
     method: 'post',
-    url: 'https://app.99inbound.com/api/e/123456',
+    url: 'https://app.99inbound.com/api/e/xPVAvAOX',
     headers: {
       'Content-Type': 'application/json',
       'Accept': 'application/json'
@@ -30,6 +29,9 @@ const sendMessage = async (name,email,message) => {
       message: message
     },
     mode: 'cors'
-  }).then((response) => { console.log(response); })
+  }).then((response) => {
+    console.log(response);
+    setTimeout(() => {  contactButton.innerText = "Submit" }, 2000);
+  })
   
 }

@@ -364,6 +364,8 @@ nav {
   margin-top: 2rem;
   padding: 0.9em 2.5em;
   cursor: pointer;
+  outline: none;
+  transition: all ease-in-out 300ms;
 }
 
 .li-when-large,
