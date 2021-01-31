@@ -383,6 +383,10 @@ nav {
   color: var(--accent);
 }
 
+.shrink {
+  transform: scale(1, 0);
+}
+
 /* shift background colors */
 @keyframes background-gradient {
   0%,

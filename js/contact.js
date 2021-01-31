@@ -3,14 +3,11 @@ const cName = document.getElementById('name');
 const cEmail = document.getElementById('email');
 const cMessage = document.getElementById('message');
 
-contactButton.addEventListener("click", (event) => {
-  event.preventDefault();
-})
 
-contactButton.addEventListener("submit", async (event) => {
+contactButton.addEventListener("click", async (event) => {
   event.preventDefault();
   console.log(contactButton.innerText)
-  contactButton.innerText = "Message received!"
+  contactButton.classList.toggle("shrink");
   sendMessage();
 });
 
@@ -35,7 +32,11 @@ const sendMessage = async () => {
     mode: 'cors'
   }).then((response) => {
     console.log(response);
-    setTimeout(() => {  contactButton.innerText = "Submit" }, 2000);
+    contactButton.innerText = "Submitted!";
+    contactButton.classList.toggle("shrink");
+    setTimeout(() => {
+      contactButton.innerText = "Submit";
+    }, 1000);
   })
   
 }
