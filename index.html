@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
     crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <title>Alfonso Martinez</title>
 </head>
 <body>
@@ -189,7 +190,7 @@
         <input class="contact-input" type="email" id="email" name="email" placeholder="enter your email" required>
         <label for="message" class="contact-label">Your Message<span>*</span></label>
         <textarea class="contact-message" id="message" name="message" class="contact-message" required></textarea>
-        <button class="contact-submit button primary">Submit</button>
+        <button class="contact-submit button primary" id="contact-submit">Submit</button>
       </form>
       <h3 class="contact-links"><a href="#" class="contact-link">Github</a> <a href="#" class="contact-link">LinkedIn</a></h3>
     </section>
@@ -197,6 +198,6 @@
 
   </main>
 
-  <script src="script.js"></script>
+  <script src="js/contact.js"></script>
 </body>
 </html>
