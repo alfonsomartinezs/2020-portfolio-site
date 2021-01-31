@@ -3,6 +3,10 @@ const cName = document.getElementById('name');
 const cEmail = document.getElementById('email');
 const cMessage = document.getElementById('message');
 
+contactButton.addEventListener("click", (event) => {
+  event.preventDefault();
+})
+
 contactButton.addEventListener("submit", async (event) => {
   event.preventDefault();
   console.log(contactButton.innerText)
@@ -35,3 +39,5 @@ const sendMessage = async () => {
   })
   
 }
+
+console.log("Hi! This is the Console!")
