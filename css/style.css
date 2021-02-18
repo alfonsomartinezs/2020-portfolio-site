@@ -192,6 +192,8 @@ nav {
 
 .gallery-item img {
   max-width: 100%;
+  max-height: 10rem;
+  justify-self: center;
 }
 .gallery-title {
   text-align: center;
