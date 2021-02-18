@@ -40,5 +40,3 @@ const sendMessage = async () => {
   })
   
 }
-
-console.log("Hi! This is the Console!")

@@ -24,6 +24,7 @@
       <a href="#portfolio" class="hero-link primary flaticon-grid">Portfolio</a>
       <a href="https://docs.google.com/document/d/1Sy97npTpoGcaPfmKSmxa6bOUIqjJgR3yGWwcSaOQ5YQ/edit" class="hero-link flaticon-resume" target="_blank">My CV</a>
     </div>
+    <span class="copy-message hidden" id="copyMessage">alphaandsew@gmail.com copied to clipboard!</span>
   </header>
 
   <nav >
@@ -37,7 +38,7 @@
       <ul class="nav-list nav-left-margin flex-when-large">
         <li><a href="https://github.com/shrikefound" target="_blank" class="flaticon-github" ></a></li>
         <li><a href="https://www.linkedin.com/in/alfonso-martinez-05b550164/" target="_blank" class="flaticon-linkedin"></a></li>
-        <li><a href="" class="flaticon-mail"></a></li>
+        <li id="copyElement" data-value="alphaandsew@gmail.com" onclick = "copyElementValue()"><a class="flaticon-mail"></a></li>
       </ul>
     </div>
   </nav>
@@ -77,7 +78,7 @@
           <h4 class="gallery-title">Lucius Bot & Front End</h4>
           <p class="gallery-description">
             Created both the Wyrd Discord bot and the landing page using <strong>Javascript</strong>, utilizing <strong>Firebase</strong> as the backend for the bot. 
-            the landing page front end was created using the <strong>React</strong> framework. It's hosted using <strong>Github</strong> Pages.
+            the landing page front end was created using <strong>React</strong> and <strong>Bootstrap</strong>. It's hosted using <strong>Github</strong> Pages.
           </p>
           <div class="gallery-buttons">
             <div>
@@ -206,5 +207,6 @@
   </main>
 
   <script src="js/contact.js"></script>
+  <script src="js/helpers.js"></script>
 </body>
 </html>

@@ -74,11 +74,10 @@ header {
   place-items: center;
   position: relative;
   overflow: hidden;
-  z-index: -1;
 }
 .hero {
   text-align: center;
-  z-index: 1;
+  z-index: 1000;
 }
 .hero-title {
   font-size: 4rem;
@@ -216,6 +215,7 @@ nav {
   padding: 0.8rem 0.5rem;
   letter-spacing: 0.15ch;
   transition: all ease-in-out 300ms;
+  cursor: pointer;
 }
 .nav-list a:hover {
   color: var(--primary);
@@ -492,6 +492,15 @@ nav {
   }
 }
 
+.hidden {
+  opacity: 0 !important;
+  transition: opacity 400ms ease-in-out;
+}
+
+#copyElement {
+  position: relative;
+}
+
 @media only screen and (min-width: 800px) {
   :root {
     --star-color: 255, 255, 255;
@@ -619,5 +628,14 @@ nav {
       10vw 23vh 0 1px var(--star-full-color),
       60vw 9vh 0 2px var(--star-full-color),
       18vw 11vh 0 0 var(--star-full-color);
+  }
+
+  .copy-message {
+    color: var(--light);
+    position: absolute;
+    bottom: 0;
+    right: 2vw;
+    z-index: 10000000;
+    opacity: 1;
   }
 }
