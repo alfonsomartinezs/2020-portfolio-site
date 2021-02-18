@@ -120,8 +120,8 @@ header {
   height: 200%;
   background: linear-gradient(
     10deg,
-    var(--bright) 17%,
-    var(--secondary) 40%,
+    var(--bright) 13%,
+    var(--secondary) 35%,
     var(--accent) 50%,
     var(--dark-accent) 60%,
     var(--dark) 90%
@@ -472,7 +472,7 @@ nav {
   }
 
   25% {
-    transform: translate(10%, 7%);
+    transform: translate(10%, 10%);
   }
 
   40% {
