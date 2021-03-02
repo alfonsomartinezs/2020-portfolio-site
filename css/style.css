@@ -228,7 +228,7 @@ nav {
 }
 
 .section {
-  padding: 5rem 1rem 4rem;
+  padding: 5rem 0 4rem;
 }
 
 .section h1 {
@@ -256,7 +256,6 @@ nav {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   list-style: none;
   justify-content: center;
   gap: 1em;
@@ -288,7 +287,6 @@ nav {
   margin-bottom: 0.3rem;
 }
 .gallery-buttons {
-  display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1em;
   margin: 1em auto 0;
@@ -504,6 +502,12 @@ nav {
   position: relative;
 }
 
+@media only screen and (min-width: 375px) {
+  .gallery-buttons {
+    display: grid;
+  }
+}
+
 @media only screen and (min-width: 800px) {
   .row {
     display: flex;
@@ -637,6 +641,10 @@ nav {
     right: 2vw;
     z-index: 10000000;
     opacity: 1;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
 }
 
