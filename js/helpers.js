@@ -11,5 +11,5 @@ const copyElementValue = () => {
   setTimeout(() => {
     copyMessage.classList.add("hidden");
 
-  },4000)
+  },10000)
 }

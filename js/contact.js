@@ -6,17 +6,23 @@ const cMessage = document.getElementById('message');
 
 contactButton.addEventListener("click", async (event) => {
   event.preventDefault();
-  console.log(contactButton.innerText)
-  contactButton.classList.toggle("shrink");
-  sendMessage();
+  let senderName = cName.value;
+  let email = cEmail.value;
+  let message = cMessage.value;
+
+  if (senderName !== "" && email !== "" && message !== "") {
+    sendMessage(senderName,email,message);    
+  } else {
+    console.log("need stuff!")
+  }
+
 });
 
 // Send a POST request with Axios
 
-const sendMessage = async () => {
-  let name = cName.value;
-  let email = cEmail.value;
-  let message = cMessage.value;
+const sendMessage = async (senderName,email,message) => {
+  
+  contactButton.classList.add("shrink");
   axios({
     method: 'post',
     url: 'https://app.99inbound.com/api/e/xPVAvAOX',
@@ -25,18 +31,17 @@ const sendMessage = async () => {
       'Accept': 'application/json'
     },
     data: {
-      name: name,
+      name: senderName,
       email: email,
       message: message
     },
     mode: 'cors'
   }).then((response) => {
-    console.log(response);
-    contactButton.innerText = "Submitted!";
-    contactButton.classList.toggle("shrink");
+    contactButton.innerText = "Sent!";
+    contactButton.classList.remove("shrink");
     setTimeout(() => {
       contactButton.innerText = "Submit";
-    }, 1000);
+    }, 3000);
   })
   
 }
