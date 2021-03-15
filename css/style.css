@@ -120,9 +120,9 @@ header {
   height: 200%;
   background: linear-gradient(
     10deg,
-    var(--bright) 13%,
-    var(--secondary) 35%,
-    var(--accent) 50%,
+    /* var(--bright) 0%, */
+    var(--secondary) 7%,
+    var(--accent) 35%,
     var(--dark-accent) 60%,
     var(--dark) 90%
   );
@@ -238,6 +238,14 @@ nav {
   letter-spacing: 0.1ch;
   font-size: 54px;
 }
+
+.section h2{
+  text-align: center;
+}
+.mt-3{
+  margin-top: 3rem;
+}
+
 .section > p {
   margin: 0 auto;
 }
@@ -277,6 +285,11 @@ nav {
   justify-self: center;
   align-self: center;
   object-fit: contain;
+}
+
+.gallery-item p{
+  max-width: 40ch;
+  margin: 0 auto;
 }
 .gallery-title {
   text-align: center;
@@ -644,7 +657,7 @@ nav {
   }
 
   .gallery {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, auto));
   }
 }
 
